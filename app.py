@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-PORT = os.getenv('PORT')
+PORT = os.getenv('PORT_NO')
 
 app = Flask(__name__)
 
