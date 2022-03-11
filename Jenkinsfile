@@ -17,20 +17,20 @@ pipeline {
             sh 'docker-compose up'
           }
         }
-        // stage('test') {
-        //   steps {
-        //     sh 'sleep 1000'
-        //     sh 'docker-compose down --remove-orphans'
-        //   }
-        // }
+        stage('test') {
+          steps {
+            sh 'sleep 1000'
+            sh 'docker-compose down --remove-orphans'
+          }
+        }
       }
     }
   }
 
-  // post { 
-  //   always {
-  //     sh 'docker-compose down --remove-orphans'
-  //   }
-  // }
+  post { 
+    always {
+      sh 'docker-compose down --remove-orphans'
+    }
+  }
 
 }
