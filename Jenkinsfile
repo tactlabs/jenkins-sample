@@ -9,7 +9,7 @@ pipeline {
     parallelsAlwaysFailFast()
 
   }
-
+  stages {
  stage('Parallel') {
       parallel {
         stage('docker-compose up') {
@@ -24,6 +24,8 @@ pipeline {
           }
         }
       }
+    }
+  }
 
   post { 
     always {
@@ -31,5 +33,4 @@ pipeline {
     }
   }
 
-}
 }
