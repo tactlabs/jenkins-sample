@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'snekha is useless  !!'
+    return 'snekha is super  !!'
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
